@@ -53,12 +53,10 @@ Just show me the code
 ## 先来了解css-loader中与CSS Modules相关的配置 
 
    CSS Modules其实并不是官方的功能，而是项目在编译打包阶段来修改类名，替换对应的class，实质上webpack打包时是依赖css-loader来进行处理，让CSS Modules生效的。  
-   |  name  | Default  | Description |
-   |  ----  | ----  | ----  |
-   | modules  | false | true表示开启CSS Modules |
-   | sourceMap  | false | true开启sourceMap，开发环境下开启比较实用 |
-   | getLocalIdent | undefined | 自定义生成的类名| 
-   | localIdentName | [path]___[name]__[local]___[hash:base64:5] | 定义了类名的模板，可以适当修改
+> 1. modules: 默认值为false；true表示开启CSS Modules 
+> 2. sourceMap：默认为false，不开启sourceMap; true开启sourceMap，开发环境下开启比较实用 
+> 3. getLocalIdent：默认为undefined，用function自定义生成的类名
+> 4. localIdentName： 默认[path]___[name]__[local]___[hash:base64:5] ，可以自定义了类名的模板，可以进行适当修改
 
 ## 开始实战吧
 这里我们就以reactjs为例，来开启CSS Modules之旅。
