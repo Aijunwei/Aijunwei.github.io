@@ -252,6 +252,11 @@ show me code
         }
     }    
 ```
-其中generateScopedName如果配置，则需要和style-loader中的localIdentName保持一致，否则会导致styleName使用的名字与实际生成的classname不一致，样式无效！filetypes的配置是为了支持scss。
+其中generateScopedName如果配置，则需要和style-loader中的localIdentName保持一致，否则会导致styleName使用的名字与实际生成的classname不一致，样式无效！filetypes的配置是为了支持scss，对于scss样式会先由postcss-scss做一次处理。
+
+### 总结
+以上就是个人关于CSS Modules初次探索，并且已经开始在项目中使用CSS Modules，写起样式来可以随心所欲，再也不用担心样式污染了。
+
+
 
 
