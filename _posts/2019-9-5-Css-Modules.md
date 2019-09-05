@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Css Modules初识
+title: CSS Modules初识
 ---
 
 ## 什么是CSS Modules
