@@ -71,6 +71,7 @@ npx create-react-app my-app
 npm run start
 ```
 演示项目使用的版本信息
+```
 {
   "name": "my-app",
   "version": "0.1.0",
