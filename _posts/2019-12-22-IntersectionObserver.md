@@ -32,6 +32,8 @@ observer.observe(target);
 ### rootMargin
 见名思义，这不就是root的margin么？对，就是root元素的外边距，类似css的margin属性，设置方式也同css的margin一样，例如"10px"(四边的边距都是10px),"10px 20px"（上下10px，左右20px）,"10px 20px 30px"（上10px，左右20px，下30px）, "10px 20px 30px 40px"（上，右，下左）。嗯～好像讲了半天，都没明白rootMargin有啥用。我们来看MDN原话：“该属性值是用作root元素和target发生交集时候的计算交集的区域范围，使用该属性可以控制root元素每一边的收缩或者扩张。默认值为0。”
 
+### thresholds
+触发注册回调的阈值，可以是一个数值或者一个数值数组(数值表示target元素和root相交区域面积占target元素面积的比例)，当target和root元素的相交比例到达设定比例时会触发注册的回调函数。值为0表示，只要target出现在root中就触发回调，值为1表示target完全出现或者消失触发回调。如果指定的是数组，需要按升序排列，例如[0,0.5,1]。
 未完成待续...
 test
 [<img src="{{ site.baseurl }}/images/404.jpg" alt="Constructocat by https://github.com/jasoncostello" style="width: 400px;"/>]({{ site.baseurl }}/)
