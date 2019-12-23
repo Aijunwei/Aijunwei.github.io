@@ -33,3 +33,5 @@ observer.observe(target);
 见名思义，这不就是root的margin么？对，就是root元素的外边距，类似css的margin属性，设置方式也同css的margin一样，例如"10px"(四边的边距都是10px),"10px 20px"（上下10px，左右20px）,"10px 20px 30px"（上10px，左右20px，下30px）, "10px 20px 30px 40px"（上，右，下左）。嗯～好像讲了半天，都没明白rootMargin有啥用。我们来看MDN原话：“该属性值是用作root元素和target发生交集时候的计算交集的区域范围，使用该属性可以控制root元素每一边的收缩或者扩张。默认值为0。”
 
 未完成待续...
+test
+[<img src="{{ site.baseurl }}/images/404.jpg" alt="Constructocat by https://github.com/jasoncostello" style="width: 400px;"/>]({{ site.baseurl }}/)
