@@ -35,5 +35,5 @@ observer.observe(target);
 ### thresholds
 触发注册回调的阈值，可以是一个数值或者一个数值数组(数值表示target元素和root相交区域面积占target元素面积的比例)，当target和root元素的相交比例到达设定比例时会触发注册的回调函数。值为0表示，只要target出现在root中就触发回调，值为1表示target完全出现或者消失触发回调。如果指定的是数组，需要按升序排列，例如[0,0.5,1]。
 未完成待续...
-test
+
 [<img src="{{ site.baseurl }}/images/404.jpg" alt="Constructocat by https://github.com/jasoncostello" style="width: 400px;"/>]({{ site.baseurl }}/)
