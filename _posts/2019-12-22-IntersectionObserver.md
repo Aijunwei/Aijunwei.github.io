@@ -17,7 +17,17 @@ var target = document.getElementById('target');//监听目标
 var observer = new IntersectionObserver((entries, observer) => {
     //do something
     //target 进入或者移除视口时调用
-    console.log(entries);
+    entries.forEach(entry => {
+    // Each entry describes an intersection change for one observed
+    // target element:
+    //   entry.boundingClientRect
+    //   entry.intersectionRatio
+    //   entry.intersectionRect
+    //   entry.isIntersecting
+    //   entry.rootBounds
+    //   entry.target
+    //   entry.time
+  });
 });
 
 observer.observe(target);
@@ -34,6 +44,29 @@ observer.observe(target);
 
 ### thresholds
 触发注册回调的阈值，可以是一个数值或者一个数值数组(数值表示target元素和root相交区域面积占target元素面积的比例)，当target和root元素的相交比例到达设定比例时会触发注册的回调函数。值为0表示，只要target出现在root中就触发回调，值为1表示target完全出现或者消失触发回调。如果指定的是数组，需要按升序排列，例如[0,0.5,1]。
-未完成待续...
+
+### IntersectionObserverEntry
+IntersectionObserverEntry 的实例作为 entries 参数被传递到一个 IntersectionObserver 的回调函数中,用于描述target和root元素在某一时刻的交叉状态。  
+
+#### boundingClientRect  
+返回目标元素的边界信息的DOMRectReadOnly，同[element.getBoundingClientRect()](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect)相同。
+
+#### intersectionRatio
+返回intersectionRect 与 boundingClientRect 的比例值
+
+#### intersectionRect 
+返回用于描述相交区域矩形的DOMRectReadOnly，相当于intersectionElement.getBoundingClientRect()返回（intersectionElement其实不存在，代表相交区域）
+
+#### isIntersecting
+返回true或false，描述了目标元素与观察者元素的交叉状态。
+
+#### rootBounds 
+返回一个 DOMRectReadOnly 用来描述交叉区域观察者(intersection observer)中的根
+
+#### target
+这个简单，返回的是目标元素。
+
+#### time
+返回一个记录从 IntersectionObserver 的时间原点(time origin)到交叉被触发的时间的时间戳(DOMHighResTimeStamp).
 
 [<img src="{{ site.baseurl }}/images/404.jpg" alt="Constructocat by https://github.com/jasoncostello" style="width: 400px;"/>]({{ site.baseurl }}/)
